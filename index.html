@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -29,76 +29,185 @@
                 <span></span>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About Us</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="#properties" class="nav-link">Properties</a></li>
+                 <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <div class="hero-logo">
-                <img src="logo.png" alt="RAGINI RUBI REAL ESTATE">
-            </div>
-            <h1 class="hero-title">Your Trusted Property Partner in Assam</h1>
-            <p class="hero-subtitle">Discover your dream home with RAGINI RUBI REAL ESTATE</p>
-            <div class="hero-buttons">
-                <a href="#properties" class="btn btn-primary">View Properties</a>
-                <a href="#contact" class="btn btn-secondary">Contact Us</a>
-            </div>
+   <!-- Hero Section with Slider -->
+<section class="hero" id="home">
+    <div class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <picture>
+                <!-- Mobile: 768x1024 (3:4 portrait) -->
+                <source 
+                    media="(max-width: 768px)" 
+                    srcset="img4m.png">
+                
+                <!-- Tablet: 1024x768 (landscape) -->
+                <source 
+                    media="(min-width: 769px) and (max-width: 1024px)" 
+                    srcset="img4m.png">
+                
+                <!-- Desktop: 1920x1080 (16:9 landscape) -->
+                <source 
+                    media="(min-width: 1025px)" 
+                    srcset="img4m.png">
+                
+                <!-- Fallback -->
+                <img 
+                    src="img4m.png" 
+                    alt="Luxury Real Estate Property"
+                    loading="eager">
+            </picture>
+            <div class="hero-overlay"></div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <picture>
+                <!-- Mobile: 768x1024 -->
+                <source 
+                    media="(max-width: 768px)" 
+                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=768&h=1024&fit=crop&auto=format&q=80">
+                
+                <!-- Tablet: 1024x768 -->
+                <source 
+                    media="(min-width: 769px) and (max-width: 1024px)" 
+                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1024&h=768&fit=crop&auto=format&q=80">
+                
+                <!-- Desktop: 1920x1080 -->
+                <source 
+                    media="(min-width: 1025px)" 
+                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80">
+                
+                <!-- Fallback -->
+                <img 
+                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80" 
+                    alt="Modern House Architecture"
+                    loading="lazy">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <picture>
+                <!-- Mobile: 768x1024 -->
+                <source 
+                    media="(max-width: 768px)" 
+                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=768&h=1024&fit=crop&auto=format&q=80">
+                
+                <!-- Tablet: 1024x768 -->
+                <source 
+                    media="(min-width: 769px) and (max-width: 1024px)" 
+                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1024&h=768&fit=crop&auto=format&q=80">
+                
+                <!-- Desktop: 1920x1080 -->
+                <source 
+                    media="(min-width: 1025px)" 
+                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&h=1080&fit=crop&auto=format&q=80">
+                
+                <!-- Fallback -->
+                <img 
+                    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&h=1080&fit=crop&auto=format&q=80" 
+                    alt="Luxury Villa with Garden"
+                    loading="lazy">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="hero-slide">
+            <picture>
+                <!-- Mobile: 768x1024 -->
+                <source 
+                    media="(max-width: 768px)" 
+                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=768&h=1024&fit=crop&auto=format&q=80">
+                
+                <!-- Tablet: 1024x768 -->
+                <source 
+                    media="(min-width: 769px) and (max-width: 1024px)" 
+                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1024&h=768&fit=crop&auto=format&q=80">
+                
+                <!-- Desktop: 1920x1080 -->
+                <source 
+                    media="(min-width: 1025px)" 
+                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80">
+                
+                <!-- Fallback -->
+                <img 
+                    src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80" 
+                    alt="Premium Apartment Complex"
+                    loading="lazy">
+            </picture>
+            <div class="hero-overlay"></div>
+        </div>
+    </div>
+    
+    <div class="container hero-content">
+        <!-- <div class="hero-logo">
+            <img src="logo.png" alt="RAGINI RUBI REAL ESTATE">
+        </div>
+        <h1 class="hero-title">Your Trusted Property Partner in Assam</h1>
+        <p class="hero-subtitle">Discover your dream home with RAGINI RUBI REAL ESTATE</p>
+        <div class="hero-buttons">
+            <a href="#properties" class="btn btn-primary">View Properties</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div> -->
+    </div>
+    
+    <!-- Slider Controls -->
+    <button class="slider-btn prev-btn" id="prevSlide" aria-label="Previous slide">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="slider-btn next-btn" id="nextSlide" aria-label="Next slide">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Slider Indicators -->
+    <div class="slider-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+    </div>
+    
+    <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+
+    <!-- Quick About Section -->
+    <section class="quick-about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Us</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Welcome to RAGINI RUBI REAL ESTATE</h3>
+            <div class="quick-about-content">
+                <div class="quick-about-text">
+                    <h2>Welcome to RAGINI RUBI REAL ESTATE</h2>
                     <p>Based in the heart of Nagaon, Assam, RAGINI RUBI REAL ESTATE has been serving clients across all of Assam with dedication and professionalism. We are your trusted partner in finding the perfect property that matches your dreams and budget.</p>
-                    
-                    <div class="mission-vision">
-                        <div class="mv-card">
-                            <i class="fas fa-bullseye"></i>
-                            <h4>Our Mission</h4>
-                            <p>To provide transparent, reliable, and customer-focused real estate services that help individuals and families find their ideal properties across Assam.</p>
-                        </div>
-                        <div class="mv-card">
-                            <i class="fas fa-eye"></i>
-                            <h4>Our Vision</h4>
-                            <p>To become the most trusted and preferred real estate company in Assam, known for integrity, professionalism, and exceptional customer service.</p>
-                        </div>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                </div>
+                <div class="quick-about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-home"></i>
+                        <h3>500+</h3>
+                        <p>Properties Sold</p>
                     </div>
-
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Experienced Team</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Local Market Expertise</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Transparent Dealings</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>End-to-End Support</span>
-                        </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>1000+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-award"></i>
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
                     </div>
                 </div>
             </div>
@@ -106,14 +215,207 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+ 
+    <!-- Featured Properties Section -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Properties</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Explore our handpicked selection of premium properties</p>
+            </div>
+            
+            <!-- Filter Message -->
+            <div class="filter-message" id="filterMessage"></div>
+
+            <div class="properties-grid" id="propertiesGrid">
+                <div class="property-card" data-type="sale">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop" alt="Modern Villa in Nagaon">
+                        <div class="property-badge">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nagaon, Assam</span>
+                        </div>
+                        <h3>Modern Villa with Garden</h3>
+                        <p>Spacious 3BHK villa with modern amenities and lush garden in prime Nagaon location.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2000 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹45,00,000</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Apartment in Guwahati">
+                        <div class="property-badge badge-rent">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Guwahati, Assam</span>
+                        </div>
+                        <h3>Luxury Apartment</h3>
+                        <p>Premium 2BHK apartment with city view, parking, and 24/7 security in Guwahati.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1200 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹18,000/month</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="sale">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="House in Jorhat">
+                        <div class="property-badge">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jorhat, Assam</span>
+                        </div>
+                        <h3>Elegant Family House</h3>
+                        <p>Beautiful 4BHK house with parking, garden, and modern kitchen in Jorhat.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 3 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 2500 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹55,00,000</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="sale">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Commercial Space">
+                        <div class="property-badge">For Sale</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nagaon, Assam</span>
+                        </div>
+                        <h3>Commercial Space</h3>
+                        <p>Prime commercial property in busy market area, ideal for retail or office use.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-store"></i> Commercial</span>
+                            <span><i class="fas fa-car"></i> Parking</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1500 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹65,00,000</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop" alt="Studio Apartment">
+                        <div class="property-badge badge-rent">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dibrugarh, Assam</span>
+                        </div>
+                        <h3>Cozy Studio Apartment</h3>
+                        <p>Fully furnished studio apartment perfect for students and professionals.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 1 Bed</span>
+                            <span><i class="fas fa-bath"></i> 1 Bath</span>
+                            <span><i class="fas fa-ruler-combined"></i> 600 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹12,000/month</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-type="rent">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop" alt="Family Home">
+                        <div class="property-badge badge-rent">For Rent</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Silchar, Assam</span>
+                        </div>
+                        <h3>Spacious Family Home</h3>
+                        <p>3BHK independent house with garden and parking in peaceful neighborhood.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1800 sq ft</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">₹22,000/month</div>
+                            <a href="#contact" class="btn-small">Contact Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Properties Message -->
+            <div class="no-properties" id="noProperties" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No properties found for the selected filter.</p>
+            </div>
+        </div>
+    </section>
+       <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Services</h2>
                 <div class="title-underline"></div>
                 <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
             </div>
-            <div class="services-grid">
+
+            <!-- Service Filter Buttons -->
+<div class="service-filter">
+    <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th"></i>
+        All Properties
+    </button>
+    <button class="filter-btn" data-filter="buy">
+        <i class="fas fa-home"></i>
+        Enquiry for Buy Property
+    </button>
+    <button class="filter-btn" data-filter="rent">
+        <i class="fas fa-key"></i>
+        Enquiry for Rent Property
+    </button>
+    <button class="filter-btn" data-filter="land">
+        <i class="fas fa-map"></i>
+        Enquiry for Buy Land
+    </button>
+    <button class="filter-btn" data-filter="sell">
+        <i class="fas fa-hand-holding-usd"></i>
+        Sell Property
+    </button>
+</div>
+
+
+            <!-- Services Grid (Original) -->
+            <div class="services-grid" id="servicesInfo">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
@@ -146,113 +448,617 @@
         </div>
     </section>
 
-    <!-- Featured Properties Section -->
-    <section class="properties" id="properties">
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Properties</h2>
+                <h2 class="section-title">What Our Clients Say</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Explore our handpicked selection of premium properties</p>
+                <p class="section-subtitle">Real experiences from satisfied customers</p>
             </div>
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop" alt="Modern Villa in Nagaon">
-                        <div class="property-badge">For Sale</div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nagaon, Assam</span>
+                    <p class="testimonial-text">"RAGINI RUBI REAL ESTATE helped us find our dream home in Nagaon. Their professional approach and dedication made the entire process smooth and stress-free. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <h3>Modern Villa with Garden</h3>
-                        <p>Spacious 3BHK villa with modern amenities and lush garden in prime Nagaon location.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 3 Beds</span>
-                            <span><i class="fas fa-bath"></i> 2 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 2000 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹45,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Homeowner, Nagaon</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Apartment in Guwahati">
-                        <div class="property-badge">For Rent</div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Guwahati, Assam</span>
+                    <p class="testimonial-text">"Excellent service! They found the perfect commercial space for my business in just a week. The team is knowledgeable, responsive, and genuinely cares about their clients."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <h3>Luxury Apartment</h3>
-                        <p>Premium 2BHK apartment with city view, parking, and 24/7 security in Guwahati.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 2 Beds</span>
-                            <span><i class="fas fa-bath"></i> 2 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 1200 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹18,000/month</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Business Owner, Guwahati</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="House in Jorhat">
-                        <div class="property-badge">For Sale</div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Jorhat, Assam</span>
+                    <p class="testimonial-text">"I was able to sell my property at the best price thanks to RAGINI RUBI REAL ESTATE. Their market knowledge and negotiation skills are exceptional. Thank you for everything!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <h3>Elegant Family House</h3>
-                        <p>Beautiful 4BHK house with parking, garden, and modern kitchen in Jorhat.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 4 Beds</span>
-                            <span><i class="fas fa-bath"></i> 3 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 2500 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹55,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
+                        <div class="author-info">
+                            <h4>Ankit Borah</h4>
+                            <p>Property Seller, Jorhat</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Commercial Space">
-                        <div class="property-badge">For Sale</div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nagaon, Assam</span>
+                    <p class="testimonial-text">"As a first-time home buyer, I was nervous about the process. The team guided me every step of the way and made my dream of owning a home come true. Forever grateful!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <h3>Commercial Space</h3>
-                        <p>Prime commercial property in busy market area, ideal for retail or office use.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-store"></i> Commercial</span>
-                            <span><i class="fas fa-car"></i> Parking</span>
-                            <span><i class="fas fa-ruler-combined"></i> 1500 sq ft</span>
+                        <div class="author-info">
+                            <h4>Sneha Das</h4>
+                            <p>First-time Buyer, Dibrugarh</p>
                         </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹65,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Professional, honest, and efficient. They helped me find a rental property that fits my budget perfectly. Best real estate service in Assam!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Vikram Singh</h4>
+                            <p>Tenant, Silchar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Outstanding experience from start to finish. They understood my requirements perfectly and delivered beyond expectations. Truly a trustworthy real estate partner!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Meghna Dutta</h4>
+                            <p>Investor, Tezpur</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Buy Property Enquiry Modal -->
+    <div class="modal" id="buyEnquiryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Property Buying Enquiry</h2>
+                <button class="modal-close" id="closeBuyModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="enquiry-form" id="buyEnquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="enquiryType" value="Buy Property">
+                    
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Your Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyName">Full Name *</label>
+                                <input type="text" id="buyName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyPhone">Phone Number *</label>
+                                <input type="tel" id="buyPhone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyEmail">Email Address *</label>
+                                <input type="email" id="buyEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyLocation">Preferred Location *</label>
+                                <input type="text" id="buyLocation" name="location" placeholder="e.g., Nagaon, Guwahati" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-home"></i> Property Requirements</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyPropertyType">Property Type *</label>
+                                <select id="buyPropertyType" name="propertyType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="land">Land/Plot</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyBudget">Budget Range (₹) *</label>
+                                <select id="buyBudget" name="budget" required>
+                                    <option value="">Select Budget</option>
+                                    <option value="below-20">Below ₹20 Lakhs</option>
+                                    <option value="20-40">₹20 - 40 Lakhs</option>
+                                    <option value="40-60">₹40 - 60 Lakhs</option>
+                                    <option value="60-80">₹60 - 80 Lakhs</option>
+                                    <option value="above-80">Above ₹80 Lakhs</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="buyBedrooms">Number of Bedrooms</label>
+                                <select id="buyBedrooms" name="bedrooms">
+                                    <option value="">Select</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                    <option value="5+">5+ BHK</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="buyTimeline">When are you planning to buy?</label>
+                                <select id="buyTimeline" name="timeline">
+                                    <option value="">Select Timeline</option>
+                                    <option value="immediate">Immediately</option>
+                                    <option value="1-month">Within 1 Month</option>
+                                    <option value="3-months">Within 3 Months</option>
+                                    <option value="6-months">Within 6 Months</option>
+                                    <option value="exploring">Just Exploring</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyMessage">Additional Requirements</label>
+                            <textarea id="buyMessage" name="message" rows="4" placeholder="Tell us more about your requirements..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBuyForm">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="form-success" id="buyFormSuccess" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your enquiry has been submitted successfully. Our team will contact you shortly to discuss your requirements.</p>
+                    <button class="btn btn-primary" id="closeBuySuccess">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rent Property Enquiry Modal -->
+    <div class="modal" id="rentEnquiryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Property Rental Enquiry</h2>
+                <button class="modal-close" id="closeRentModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="enquiry-form" id="rentEnquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="enquiryType" value="Rent Property">
+                    
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Your Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rentName">Full Name *</label>
+                                <input type="text" id="rentName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rentPhone">Phone Number *</label>
+                                <input type="tel" id="rentPhone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rentEmail">Email Address *</label>
+                                <input type="email" id="rentEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rentLocation">Preferred Location *</label>
+                                <input type="text" id="rentLocation" name="location" placeholder="e.g., Nagaon, Guwahati" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-key"></i> Rental Requirements</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rentPropertyType">Property Type *</label>
+                                <select id="rentPropertyType" name="propertyType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="house">Independent House</option>
+                                    <option value="studio">Studio Apartment</option>
+                                    <option value="commercial">Commercial Space</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="rentBudget">Monthly Budget (₹) *</label>
+                                <select id="rentBudget" name="budget" required>
+                                    <option value="">Select Budget</option>
+                                    <option value="below-10">Below ₹10,000</option>
+                                    <option value="10-15">₹10,000 - 15,000</option>
+                                    <option value="15-20">₹15,000 - 20,000</option>
+                                    <option value="20-30">₹20,000 - 30,000</option>
+                                    <option value="above-30">Above ₹30,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rentBedrooms">Number of Bedrooms *</label>
+                                <select id="rentBedrooms" name="bedrooms" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                    <option value="studio">Studio</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="rentMoveIn">When do you want to move in?</label>
+                                <select id="rentMoveIn" name="moveIn">
+                                    <option value="">Select Timeline</option>
+                                    <option value="immediate">Immediately</option>
+                                    <option value="1-week">Within 1 Week</option>
+                                    <option value="2-weeks">Within 2 Weeks</option>
+                                    <option value="1-month">Within 1 Month</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rentFurnishing">Furnishing Preference</label>
+                            <select id="rentFurnishing" name="furnishing">
+                                <option value="">Select</option>
+                                <option value="furnished">Fully Furnished</option>
+                                <option value="semi-furnished">Semi Furnished</option>
+                                <option value="unfurnished">Unfurnished</option>
+                                <option value="any">Any</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rentMessage">Additional Requirements</label>
+                            <textarea id="rentMessage" name="message" rows="4" placeholder="Tell us more about your requirements..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelRentForm">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="form-success" id="rentFormSuccess" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your enquiry has been submitted successfully. Our team will contact you shortly with suitable rental options.</p>
+                    <button class="btn btn-primary" id="closeRentSuccess">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell Property Form Modal -->
+    <div class="modal" id="sellPropertyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sell Your Property</h2>
+                <button class="modal-close" id="closeSellModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="sell-property-form" id="sellPropertyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="enquiryType" value="Sell Property">
+                    
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Owner Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ownerName">Full Name *</label>
+                                <input type="text" id="ownerName" name="ownerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerPhone">Phone Number *</label>
+                                <input type="tel" id="ownerPhone" name="ownerPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ownerEmail">Email Address *</label>
+                                <input type="email" id="ownerEmail" name="ownerEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerAddress">Current Address *</label>
+                                <input type="text" id="ownerAddress" name="ownerAddress" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-building"></i> Property Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="propertyType">Property Type *</label>
+                                <select id="propertyType" name="propertyType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="land">Land/Plot</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyCategory">Category *</label>
+                                <select id="propertyCategory" name="propertyCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="sale">For Sale</option>
+                                    <option value="rent">For Rent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="propertyLocation">Property Location *</label>
+                                <input type="text" id="propertyLocation" name="propertyLocation" placeholder="City, Assam" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyPrice">Expected Price (₹) *</label>
+                                <input type="number" id="propertyPrice" name="propertyPrice" placeholder="e.g., 4500000" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="propertySize">Property Size (sq ft) *</label>
+                                <input type="number" id="propertySize" name="propertySize" placeholder="e.g., 2000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">Bedrooms</label>
+                                <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bathrooms">Bathrooms</label>
+                                <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g., 2">
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyAge">Property Age (years)</label>
+                                <input type="number" id="propertyAge" name="propertyAge" placeholder="e.g., 5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="propertyDescription">Property Description *</label>
+                            <textarea id="propertyDescription" name="propertyDescription" rows="4" placeholder="Describe your property, amenities, nearby facilities, etc." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="propertyFeatures">Additional Features</label>
+                            <input type="text" id="propertyFeatures" name="propertyFeatures" placeholder="e.g., Parking, Garden, Security">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelSellForm">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit Property</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div class="form-success" id="sellFormSuccess" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your property details have been submitted successfully. Our team will contact you shortly to discuss further.</p>
+                    <button class="btn btn-primary" id="closeSellSuccess">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- Land Enquiry Modal -->
+<div class="modal" id="landEnquiryModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Land Purchase Enquiry</h2>
+            <button class="modal-close" id="closeLandModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="enquiry-form" id="landEnquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="hidden" name="enquiryType" value="Buy Land">
+                
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Your Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="landName">Full Name *</label>
+                            <input type="text" id="landName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="landPhone">Phone Number *</label>
+                            <input type="tel" id="landPhone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="landEmail">Email Address *</label>
+                            <input type="email" id="landEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="landCurrentAddress">Current Address *</label>
+                            <input type="text" id="landCurrentAddress" name="currentAddress" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-map"></i> Land Requirements</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="landLocation">Preferred Location *</label>
+                            <input type="text" id="landLocation" name="location" placeholder="e.g., Nagaon, Guwahati" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="landPurpose">Purpose of Purchase *</label>
+                            <select id="landPurpose" name="purpose" required>
+                                <option value="">Select Purpose</option>
+                                <option value="residential">Residential Construction</option>
+                                <option value="commercial">Commercial Development</option>
+                                <option value="agricultural">Agricultural Use</option>
+                                <option value="investment">Investment</option>
+                                <option value="industrial">Industrial Use</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="landSize">Required Land Size *</label>
+                            <select id="landSize" name="landSize" required>
+                                <option value="">Select Size</option>
+                                <option value="below-1000">Below 1000 sq ft</option>
+                                <option value="1000-2000">1000 - 2000 sq ft</option>
+                                <option value="2000-3000">2000 - 3000 sq ft</option>
+                                <option value="3000-5000">3000 - 5000 sq ft</option>
+                                <option value="5000-10000">5000 - 10000 sq ft (1 Bigha)</option>
+                                <option value="above-10000">Above 10000 sq ft (Above 1 Bigha)</option>
+                                <option value="multiple-bigha">Multiple Bighas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="landBudget">Budget Range (₹) *</label>
+                            <select id="landBudget" name="budget" required>
+                                <option value="">Select Budget</option>
+                                <option value="below-5">Below ₹5 Lakhs</option>
+                                <option value="5-10">₹5 - 10 Lakhs</option>
+                                <option value="10-20">₹10 - 20 Lakhs</option>
+                                <option value="20-30">₹20 - 30 Lakhs</option>
+                                <option value="30-50">₹30 - 50 Lakhs</option>
+                                <option value="above-50">Above ₹50 Lakhs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="landTimeline">When are you planning to buy?</label>
+                            <select id="landTimeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="immediate">Immediately</option>
+                                <option value="1-month">Within 1 Month</option>
+                                <option value="3-months">Within 3 Months</option>
+                                <option value="6-months">Within 6 Months</option>
+                                <option value="exploring">Just Exploring</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="landType">Land Type Preference</label>
+                            <select id="landType" name="landType">
+                                <option value="">Select Type</option>
+                                <option value="corner-plot">Corner Plot</option>
+                                <option value="main-road">Main Road Facing</option>
+                                <option value="gated-community">Gated Community</option>
+                                <option value="open-land">Open Land</option>
+                                <option value="any">Any</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="landFeatures">Preferred Features</label>
+                        <input type="text" id="landFeatures" name="features" placeholder="e.g., Clear Title, Electricity Connection, Water Supply">
+                    </div>
+                    <div class="form-group">
+                        <label for="landMessage">Additional Requirements</label>
+                        <textarea id="landMessage" name="message" rows="4" placeholder="Tell us more about your land requirements..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelLandForm">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="form-success" id="landFormSuccess" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>Your land enquiry has been submitted successfully. Our team will contact you shortly with suitable land options.</p>
+                <button class="btn btn-primary" id="closeLandSuccess">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -303,7 +1109,7 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -336,10 +1142,10 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#properties">Properties</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -356,8 +1162,8 @@
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Nagaon, Assam</li>
-                        <li><i class="fas fa-phone"></i> 91 70865 65277</li>
-                        <li><i class="fas fa-envelope"></i> raginirubirealestate@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9954635650</li>
+                        <li><i class="fas fa-envelope"></i> info@raginirubirealestate.com</li>
                     </ul>
                 </div>
             </div>
@@ -369,10 +1175,10 @@
 
     <!-- Floating Action Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/91 70865 65277" class="float-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
+        <a href="https://wa.me/919954635650" class="float-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+91 70865 65277" class="float-btn call-btn" aria-label="Call">
+        <a href="tel:+919954635650" class="float-btn call-btn" aria-label="Call">
             <i class="fas fa-phone"></i>
         </a>
     </div>
