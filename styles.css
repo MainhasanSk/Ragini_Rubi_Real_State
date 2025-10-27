@@ -1774,3 +1774,26 @@ section {
         justify-content: center;
     }
 }
+.divider-image-section {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.divider-image-section img,
+.divider-image-section picture {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+@media (max-width: 1024px) {
+    .divider-image-section img {
+        max-height: 500px;
+    }
+}
+@media (max-width: 768px) {
+    .divider-image-section img {
+        max-height: 400px;
+    }
+}

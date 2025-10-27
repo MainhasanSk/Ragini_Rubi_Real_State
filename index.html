@@ -74,21 +74,21 @@
                 <!-- Mobile: 768x1024 -->
                 <source 
                     media="(max-width: 768px)" 
-                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=768&h=1024&fit=crop&auto=format&q=80">
+                    srcset="rgni2.jpg">
                 
                 <!-- Tablet: 1024x768 -->
                 <source 
                     media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1024&h=768&fit=crop&auto=format&q=80">
+                    srcset="">
                 
                 <!-- Desktop: 1920x1080 -->
                 <source 
                     media="(min-width: 1025px)" 
-                    srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80">
-                
+                    srcset="rgni2.jpg">
+                <!--https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80-->
                 <!-- Fallback -->
                 <img 
-                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80" 
+                    src="rgni2.jpg" 
                     alt="Modern House Architecture"
                     loading="lazy">
             </picture>
@@ -101,21 +101,21 @@
                 <!-- Mobile: 768x1024 -->
                 <source 
                     media="(max-width: 768px)" 
-                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=768&h=1024&fit=crop&auto=format&q=80">
+                    srcset="RGNI2.png">
                 
                 <!-- Tablet: 1024x768 -->
                 <source 
                     media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1024&h=768&fit=crop&auto=format&q=80">
+                    srcset="">
                 
                 <!-- Desktop: 1920x1080 -->
                 <source 
                     media="(min-width: 1025px)" 
-                    srcset="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&h=1080&fit=crop&auto=format&q=80">
+                    srcset="RGNI2.png">
                 
                 <!-- Fallback -->
                 <img 
-                    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&h=1080&fit=crop&auto=format&q=80" 
+                    src="RGNI2.png" 
                     alt="Luxury Villa with Garden"
                     loading="lazy">
             </picture>
@@ -381,6 +381,21 @@
             </div>
         </div>
     </section>
+
+    <!-- Divider Image Section -->
+<div class="divider-image-section">
+    <picture>
+        <!-- Mobile image (recommended size: 768x400) -->
+        <source media="(max-width: 768px)" srcset="rgni2.jpg">
+        <!-- Tablet image (recommended size: 1024x500) -->
+        <source media="(min-width: 769px) and (max-width: 1024px)" srcset="rgni2.jpg">
+        <!-- Desktop image (recommended size: 1920x600) -->
+        <source media="(min-width: 1025px)" srcset="rgni2.jpg">
+        <!-- Fallback desktop -->
+        <img src="rgni2.jpg" alt="Showcase" style="width:100%; height:auto;">
+    </picture>
+</div>
+
        <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -391,10 +406,10 @@
 
             <!-- Service Filter Buttons -->
 <div class="service-filter">
-    <button class="filter-btn active" data-filter="all">
+    <!-- <button class="filter-btn active" data-filter="all">
         <i class="fas fa-th"></i>
         All Properties
-    </button>
+    </button> -->
     <button class="filter-btn" data-filter="buy">
         <i class="fas fa-home"></i>
         Enquiry for Buy Property
