@@ -31,157 +31,76 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="#properties" class="nav-link">Properties</a></li>
-                 <li><a href="#services" class="nav-link">Services</a></li>
+                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
    <!-- Hero Section with Slider -->
-<section class="hero" id="home">
-    <div class="hero-slider">
+<!-- Hero Section - Image Slider Only -->
+<section class="hero-slider-section" id="home">
+    <div class="hero-slider-wrapper">
         <!-- Slide 1 -->
-        <div class="hero-slide active">
+        <div class="hero-slide-item active">
             <picture>
-                <!-- Mobile: 768x1024 (3:4 portrait) -->
-                <source 
-                    media="(max-width: 768px)" 
-                    srcset="rigni-rubi.jpg">
-                
-                <!-- Tablet: 1024x768 (landscape) -->
-                <source 
-                    media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="rigni-rubi.jpg">
-                
-                <!-- Desktop: 1920x1080 (16:9 landscape) -->
-                <source 
-                    media="(min-width: 1025px)" 
-                    srcset="rigni-rubi.jpg">
-                
-                <!-- Fallback -->
-                <img 
-                    src="rigni-rubi.jpg" 
-                    alt="Luxury Real Estate Property"
-                    loading="eager">
-            </picture>
-            <div class="hero-overlay"></div>
+                <source media="(max-width: 768px)" srcset="newrr.png">
+                <source media="(min-width: 769px) and (max-width: 1024px)" srcset="newrr.png">
+                <source media="(min-width: 1025px)" srcset="rigni-rubi.jpg">
+                <img src="rigni-rubi.jpg" alt="RAGINI RUBI REAL ESTATE Property 1" loading="eager">
+            </picture> 
+            
         </div>
 
         <!-- Slide 2 -->
-        <div class="hero-slide">
+        <div class="hero-slide-item">
             <picture>
-                <!-- Mobile: 768x1024 -->
-                <source 
-                    media="(max-width: 768px)" 
-                    srcset="rgni2.jpg">
-                
-                <!-- Tablet: 1024x768 -->
-                <source 
-                    media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="">
-                
-                <!-- Desktop: 1920x1080 -->
-                <source 
-                    media="(min-width: 1025px)" 
-                    srcset="rgni2.jpg">
-                <!--https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=1080&fit=crop&auto=format&q=80-->
-                <!-- Fallback -->
-                <img 
-                    src="rgni2.jpg" 
-                    alt="Modern House Architecture"
-                    loading="lazy">
+                <source media="(max-width: 768px)" srcset="rgni2.jpg">
+                <source media="(min-width: 769px) and (max-width: 1024px)" srcset="rgni2.jpg">
+                <source media="(min-width: 1025px)" srcset="rgni2.jpg">
+                <img src="rgni2.jpg" alt="RAGINI RUBI REAL ESTATE Property 2" loading="lazy">
             </picture>
-            <div class="hero-overlay"></div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="hero-slide">
+        <!-- <div class="hero-slide-item">
             <picture>
-                <!-- Mobile: 768x1024 -->
-                <source 
-                    media="(max-width: 768px)" 
-                    srcset="RGNI2.png">
-                
-                <!-- Tablet: 1024x768 -->
-                <source 
-                    media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="">
-                
-                <!-- Desktop: 1920x1080 -->
-                <source 
-                    media="(min-width: 1025px)" 
-                    srcset="RGNI2.png">
-                
-                <!-- Fallback -->
-                <img 
-                    src="RGNI2.png" 
-                    alt="Luxury Villa with Garden"
-                    loading="lazy">
+                <source media="(max-width: 768px)" srcset="RGNI2.png">
+                <source media="(min-width: 769px) and (max-width: 1024px)" srcset="RGNI2.png">
+                <source media="(min-width: 1025px)" srcset="RGNI2.png">
+                <img src="RGNI2.png" alt="RAGINI RUBI REAL ESTATE Property 3" loading="lazy">
             </picture>
-            <div class="hero-overlay"></div>
-        </div>
-
+        </div> -->
         <!-- Slide 4 -->
-        <div class="hero-slide">
+        <!-- <div class="hero-slide-item">
             <picture>
-                <!-- Mobile: 768x1024 -->
-                <source 
-                    media="(max-width: 768px)" 
-                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=768&h=1024&fit=crop&auto=format&q=80">
-                
-                <!-- Tablet: 1024x768 -->
-                <source 
-                    media="(min-width: 769px) and (max-width: 1024px)" 
-                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1024&h=768&fit=crop&auto=format&q=80">
-                
-                <!-- Desktop: 1920x1080 -->
-                <source 
-                    media="(min-width: 1025px)" 
-                    srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80">
-                
-                <!-- Fallback -->
-                <img 
-                    src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80" 
-                    alt="Premium Apartment Complex"
-                    loading="lazy">
+                <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=768&h=1024&fit=crop&auto=format&q=80">
+                <source media="(min-width: 769px) and (max-width: 1024px)" srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1024&h=768&fit=crop&auto=format&q=80">
+                <source media="(min-width: 1025px)" srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=1080&fit=crop&auto=format&q=80" alt="RAGINI RUBI REAL ESTATE Property 4" loading="lazy">
             </picture>
-            <div class="hero-overlay"></div>
-        </div>
-    </div>
-    
-    <div class="container hero-content">
-        <!-- <div class="hero-logo">
-            <img src="logo.png" alt="RAGINI RUBI REAL ESTATE">
-        </div>
-        <h1 class="hero-title">Your Trusted Property Partner in Assam</h1>
-        <p class="hero-subtitle">Discover your dream home with RAGINI RUBI REAL ESTATE</p>
-        <div class="hero-buttons">
-            <a href="#properties" class="btn btn-primary">View Properties</a>
-            <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div> -->
     </div>
     
     <!-- Slider Controls -->
-    <button class="slider-btn prev-btn" id="prevSlide" aria-label="Previous slide">
+    <button class="hero-slider-btn hero-prev-btn" id="prevSlide" aria-label="Previous slide">
         <i class="fas fa-chevron-left"></i>
     </button>
-    <button class="slider-btn next-btn" id="nextSlide" aria-label="Next slide">
+    <button class="hero-slider-btn hero-next-btn" id="nextSlide" aria-label="Next slide">
         <i class="fas fa-chevron-right"></i>
     </button>
     
     <!-- Slider Indicators -->
-    <div class="slider-indicators">
-        <span class="indicator active" data-slide="0"></span>
-        <span class="indicator" data-slide="1"></span>
-        <span class="indicator" data-slide="2"></span>
-        <span class="indicator" data-slide="3"></span>
-    </div>
-    
-    <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
+    <div class="hero-slider-indicators">
+        <span class="hero-indicator active" data-slide="0"></span>
+        <span class="hero-indicator" data-slide="1"></span>
+        <span class="hero-indicator" data-slide="2"></span>
+        <span class="hero-indicator" data-slide="3"></span>
     </div>
 </section>
+
 
 
     <!-- Quick About Section -->
@@ -217,170 +136,90 @@
     <!-- Services Section -->
  
     <!-- Featured Properties Section -->
-    <section class="properties" id="properties">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Properties</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Explore our handpicked selection of premium properties</p>
-            </div>
-            
-            <!-- Filter Message -->
-            <div class="filter-message" id="filterMessage"></div>
+  <section class="properties" id="properties">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Explore our handpicked selection of premium properties</p>
+        </div>
+        
+        <!-- Filter Message -->
+        <div class="filter-message" id="filterMessage"></div>
 
-            <div class="properties-grid" id="propertiesGrid">
-                <div class="property-card" data-type="sale">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=400&fit=crop" alt="Modern Villa in Nagaon">
-                        <div class="property-badge">For Sale</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nagaon, Assam</span>
-                        </div>
-                        <h3>Modern Villa with Garden</h3>
-                        <p>Spacious 3BHK villa with modern amenities and lush garden in prime Nagaon location.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 3 Beds</span>
-                            <span><i class="fas fa-bath"></i> 2 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 2000 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹45,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
-                    </div>
+        <!-- Properties Grid -->
+        <div class="properties-grid" id="propertiesGrid">
+            <div class="property-card" data-type="sale">
+                <div class="property-image">
+                    <img src="rgni-work2.jpg" alt="Modern Villa in Nagaon">
+                    <div class="property-badge">For Sale</div>
                 </div>
+                <div class="property-content">
+                    <div class="property-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nagaon, Assam</span>
+                    </div>
+                    <h3>Apartment for Sale</h3>
+                    <p>Welcome to SAILAJA'S PARADISE — a haven of luxury and comfort. Live your life in style with spacious interiors, elegant design, and world-class amenities. Experience the perfect blend of modern living and peaceful surroundings, where every day feels like a dream.</p>
 
-                <div class="property-card" data-type="rent">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Apartment in Guwahati">
-                        <div class="property-badge badge-rent">For Rent</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Guwahati, Assam</span>
-                        </div>
-                        <h3>Luxury Apartment</h3>
-                        <p>Premium 2BHK apartment with city view, parking, and 24/7 security in Guwahati.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 2 Beds</span>
-                            <span><i class="fas fa-bath"></i> 2 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 1200 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹18,000/month</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card" data-type="sale">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="House in Jorhat">
-                        <div class="property-badge">For Sale</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Jorhat, Assam</span>
-                        </div>
-                        <h3>Elegant Family House</h3>
-                        <p>Beautiful 4BHK house with parking, garden, and modern kitchen in Jorhat.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 4 Beds</span>
-                            <span><i class="fas fa-bath"></i> 3 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 2500 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹55,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card" data-type="sale">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Commercial Space">
-                        <div class="property-badge">For Sale</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nagaon, Assam</span>
-                        </div>
-                        <h3>Commercial Space</h3>
-                        <p>Prime commercial property in busy market area, ideal for retail or office use.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-store"></i> Commercial</span>
-                            <span><i class="fas fa-car"></i> Parking</span>
-                            <span><i class="fas fa-ruler-combined"></i> 1500 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹65,00,000</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card" data-type="rent">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop" alt="Studio Apartment">
-                        <div class="property-badge badge-rent">For Rent</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Dibrugarh, Assam</span>
-                        </div>
-                        <h3>Cozy Studio Apartment</h3>
-                        <p>Fully furnished studio apartment perfect for students and professionals.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 1 Bed</span>
-                            <span><i class="fas fa-bath"></i> 1 Bath</span>
-                            <span><i class="fas fa-ruler-combined"></i> 600 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹12,000/month</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card" data-type="rent">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop" alt="Family Home">
-                        <div class="property-badge badge-rent">For Rent</div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Silchar, Assam</span>
-                        </div>
-                        <h3>Spacious Family Home</h3>
-                        <p>3BHK independent house with garden and parking in peaceful neighborhood.</p>
-                        <div class="property-features">
-                            <span><i class="fas fa-bed"></i> 3 Beds</span>
-                            <span><i class="fas fa-bath"></i> 2 Baths</span>
-                            <span><i class="fas fa-ruler-combined"></i> 1800 sq ft</span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="property-price">₹22,000/month</div>
-                            <a href="#contact" class="btn-small">Contact Now</a>
-                        </div>
+                    <div class="property-footer">
+                        <a href="#contact" class="btn-small">Book Now</a>
                     </div>
                 </div>
             </div>
 
-            <!-- No Properties Message -->
-            <div class="no-properties" id="noProperties" style="display: none;">
-                <i class="fas fa-search"></i>
-                <p>No properties found for the selected filter.</p>
+            <div class="property-card" data-type="rent">
+                <div class="property-image">
+                    <img src="rgni-work.jpg" alt="Apartment in Guwahati">
+                    <div class="property-badge badge-rent">For Rent</div>
+                </div>
+                <div class="property-content">
+                    <div class="property-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Guwahati, Assam</span>
+                    </div>
+                    <h3>Luxury Apartment</h3>
+                    <p>Premium commercial space for rent at NH37, Lalmati, Guwahati — the ideal location to grow your business. Enjoy excellent connectivity, a prime roadside presence, and a professional environment designed for success.</p>
+    
+                    <div class="property-footer">
+                        <a href="#contact" class="btn-small">Book Now</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+
+        <!-- Property Video Section -->
+        <div class="property-video-section">
+            <div class="section-header">
+                <h3 class="video-section-title">Property Video Tour</h3>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/zNM8s6MOxHw" 
+                        title="RAGINI RUBI REAL ESTATE - Property Tour" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Prime Paradise Walkthrough</h3>
+                    <p>Explore our luxury residential apartment in Nagaon, Assam</p>
+                    <span class="video-badge youtube"><i class="fab fa-youtube"></i> YouTube</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Properties Message -->
+        <div class="no-properties" id="noProperties" style="display: none;">
+            <i class="fas fa-search"></i>
+            <p>No properties found for the selected filter.</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Divider Image Section -->
 <div class="divider-image-section">
@@ -396,72 +235,188 @@
     </picture>
 </div>
 
-       <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
-            </div>
+     <!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
+        </div>
 
-            <!-- Service Filter Buttons -->
-<div class="service-filter">
-    <!-- <button class="filter-btn active" data-filter="all">
-        <i class="fas fa-th"></i>
-        All Properties
-    </button> -->
-    <button class="filter-btn" data-filter="buy">
-        <i class="fas fa-home"></i>
-        Enquiry for Buy Property
-    </button>
-    <button class="filter-btn" data-filter="rent">
-        <i class="fas fa-key"></i>
-        Enquiry for Rent Property
-    </button>
-    <button class="filter-btn" data-filter="land">
-        <i class="fas fa-map"></i>
-        Enquiry for Buy Land
-    </button>
-    <button class="filter-btn" data-filter="sell">
-        <i class="fas fa-hand-holding-usd"></i>
-        Sell Property
-    </button>
-</div>
-
-
-            <!-- Services Grid (Original) -->
-            <div class="services-grid" id="servicesInfo">
-                <div class="service-card">
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <!-- Property Buying Service -->
+            <div class="service-box">
+                <div class="service-box-header">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Property Buying</h3>
-                    <p>Find your dream home from our extensive collection of residential and commercial properties across Assam.</p>
                 </div>
-                <div class="service-card">
+                <p class="service-intro">Find your dream home from our extensive collection of residential and commercial properties across Assam.</p>
+                
+                <div class="service-details">
+                    <ul>
+                        <!-- <li><i class="fas fa-check-circle"></i> Wide selection of verified properties</li>
+                        <li><i class="fas fa-check-circle"></i> Expert guidance throughout the buying process</li>
+                        <li><i class="fas fa-check-circle"></i> Legal documentation assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Home loan support and advice</li>
+                        <li><i class="fas fa-check-circle"></i> Property site visits and inspections</li>
+                        <li><i class="fas fa-check-circle"></i> Negotiation on your behalf</li> -->
+                    </ul>
+                    <p class="service-note">We help you find the perfect property that matches your budget and lifestyle needs across all of Assam.</p>
+                </div>
+                
+                <button class="enquiry-btn" onclick="openBuyModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
+            </div>
+
+            <!-- Property Selling Service -->
+            <div class="service-box">
+                <div class="service-box-header">
                     <div class="service-icon">
                         <i class="fas fa-hand-holding-usd"></i>
                     </div>
                     <h3>Property Selling</h3>
-                    <p>Get the best value for your property with our expert marketing and negotiation services.</p>
                 </div>
-                <div class="service-card">
+                <p class="service-intro">Get the best value for your property with our expert marketing and negotiation services.</p>
+                
+                <div class="service-details">
+                    <p class="service-note">Our proven marketing strategies ensure your property reaches the right buyers quickly and at the best price.</p>
+                </div>
+                
+                <button class="enquiry-btn" onclick="openSellModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
+            </div>
+
+            <!-- Rent Assistance Service -->
+            <div class="service-box">
+                <div class="service-box-header">
                     <div class="service-icon">
                         <i class="fas fa-key"></i>
                     </div>
                     <h3>Rent Assistance</h3>
-                    <p>Whether you're a landlord or tenant, we help you find the perfect rental match quickly and efficiently.</p>
                 </div>
-                <div class="service-card">
+                <p class="service-intro">Whether you're a landlord or tenant, we help you find the perfect rental match quickly and efficiently.</p>
+                
+                <div class="service-details">
+                    <ul>
+                        <!-- <li><i class="fas fa-check-circle"></i> Extensive database of rental properties</li>
+                        <li><i class="fas fa-check-circle"></i> Tenant verification and background checks</li>
+                        <li><i class="fas fa-check-circle"></i> Rental agreement preparation</li>
+                        <li><i class="fas fa-check-circle"></i> Property maintenance coordination</li>
+                        <li><i class="fas fa-check-circle"></i> Rent collection assistance for landlords</li>
+                        <li><i class="fas fa-check-circle"></i> Dispute resolution support</li> -->
+                    </ul>
+                    <p class="service-note">We streamline the rental process for both property owners and tenants, ensuring smooth and hassle-free transactions.</p>
+                </div>
+                
+                <button class="enquiry-btn" onclick="openRentModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
+            </div>
+
+            <!-- Real Estate Consultancy Service -->
+            <div class="service-box">
+                <div class="service-box-header">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Real Estate Consultancy</h3>
-                    <p>Expert advice on property investment, market trends, and legal documentation to make informed decisions.</p>
                 </div>
+                <p class="service-intro">Expert advice on property investment, market trends, and legal documentation to make informed decisions.</p>
+                
+                <div class="service-details">
+                    <ul>
+                        <!-- <li><i class="fas fa-check-circle"></i> Market analysis and trends</li>
+                        <li><i class="fas fa-check-circle"></i> Investment opportunity evaluation</li>
+                        <li><i class="fas fa-check-circle"></i> Property portfolio management</li>
+                        <li><i class="fas fa-check-circle"></i> Legal and regulatory guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Financial planning for property investments</li>
+                        <li><i class="fas fa-check-circle"></i> Location-specific market insights</li> -->
+                    </ul>
+                    <p class="service-note">Our experienced consultants provide data-driven insights to help you make smart real estate investment decisions.</p>
+                </div>
+                
+                <button class="enquiry-btn" onclick="openBuyModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
             </div>
+
+            <!-- Land Purchase Service -->
+            <div class="service-box">
+                <div class="service-box-header">
+                    <div class="service-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Land Purchase</h3>
+                </div>
+                <p class="service-intro">Find the perfect plot of land for your construction, agricultural, or investment needs across Assam.</p>
+                
+                <div class="service-details">
+                    <ul>
+                        <!-- <li><i class="fas fa-check-circle"></i> Prime land locations available</li>
+                        <li><i class="fas fa-check-circle"></i> Clear title verification</li>
+                        <li><i class="fas fa-check-circle"></i> Soil and location assessment</li>
+                        <li><i class="fas fa-check-circle"></i> Government approval assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Land measurement and survey</li>
+                        <li><i class="fas fa-check-circle"></i> Registration and documentation support</li> -->
+                    </ul>
+                    <p class="service-note">We specialize in helping clients find suitable land for residential, commercial, agricultural, and industrial purposes.</p>
+                </div>
+                
+                <button class="enquiry-btn" onclick="openLandModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
+            </div>
+            <!--Loan Services-->
+       <div class="service-box">
+                <div class="service-box-header">
+                    <div class="service-icon">
+                           <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <h3>Loan Assistance</h3>
+                </div>
+                <p class="service-intro">We provide complete loan assistance through our empanelled banks to help you finance your dream property with ease and reliability.</p>
+                
+                <div class="service-details">
+                    <ul>
+                        <!-- <li><i class="fas fa-check-circle"></i> Prime land locations available</li>
+                        <li><i class="fas fa-check-circle"></i> Clear title verification</li>
+                        <li><i class="fas fa-check-circle"></i> Soil and location assessment</li>
+                        <li><i class="fas fa-check-circle"></i> Government approval assistance</li>
+                        <li><i class="fas fa-check-circle"></i> Land measurement and survey</li>
+                        <li><i class="fas fa-check-circle"></i> Registration and documentation support</li> -->
+                    </ul>
+                    <p class="service-note"><strong>Empanelled Banks:</strong> PNB, SBI, HDFC, LIC, INDIAN BANK.<br><strong>Insurance Services:</strong> Life Insurance, General Insurance, Health Insurance.</p>
+                
+                    
+                </div>
+                
+                <button class="enquiry-btn" onclick="openLandModal()">
+                    <i class="fas fa-paper-plane"></i>
+                    Enquiry Now
+                </button>
+            </div>
+ </div>
         </div>
-    </section>
+         <div class="view-more-services">
+            <a href="services.html" class="btn btn-primary btn-large">
+                <i class="fas fa-th-large"></i>
+                View All Services
+            </a>
+        </div>
+    </div>
+</section>
+
 
 
     <!-- Testimonials Section -->
@@ -595,6 +550,65 @@
             </div>
         </div>
     </section>
+   <!-- Gallery Preview Section -->
+<section class="gallery-preview" id="gallery">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Gallery</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Explore our featured properties and success stories</p>
+        </div>
+       
+
+        <!-- Gallery Filters -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/rgni24.jpg" alt="Modern Villa" loading="lazy">
+                <div class="gallery-overlay">
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/rgni9.jpg" alt="Apartment Complex" loading="lazy">
+                <div class="gallery-overlay">
+                   
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/rgni8.jpg" alt="Family Home" loading="lazy">
+
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=600&fit=crop&auto=format&q=80" alt="Commercial Property" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="gallery-info">
+                        <h3>Commercial Space</h3>
+                        <p>Prime Location in Dibrugarh</p>
+                    </div>
+                </div>
+            </div>
+              
+            <div class="gallery-item">
+                <img src="images/rgni12.jpg" alt="Family Home" loading="lazy">
+
+            </div>
+              
+            <div class="gallery-item">
+                <img src="images/rgni23.jpg" alt="Family Home" loading="lazy">
+
+            </div>
+        </div> 
+        
+        <div class="gallery-button">
+            <a href="gallery.html" class="btn btn-primary">
+                <i class="fas fa-images"></i>
+                View All Photos
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Buy Property Enquiry Modal -->
     <div class="modal" id="buyEnquiryModal">
@@ -1202,7 +1216,7 @@
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+     <script src="service.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

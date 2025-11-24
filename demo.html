@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Hero Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Hero Slider Section - Perfect Fit for All Devices */
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero-slider-wrapper {
+        padding-bottom: 100%; /* Square ratio for very small screens */
+    }
+}
+/* Service Details Box */
+.service-details-box {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.service-details-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: var(--light-gray);
+    border: 2px solid var(--primary-red);
+    border-radius: 10px;
+    color: var(--primary-red);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-details-btn:hover {
+    background: var(--primary-red);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.service-details-btn i {
+    transition: transform 0.3s ease;
+}
+
+.service-details-btn.active i {
+    transform: rotate(180deg);
+}
+
+.service-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: var(--light-gray);
+    border-radius: 0 0 10px 10px;
+}
+
+.service-description.show {
+    max-height: 600px;
+    padding: 20px;
+    margin-top: -2px;
+    border: 2px solid var(--primary-red);
+    border-top: none;
+}
+
+.service-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.service-description ul li {
+    padding: 8px 0;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.service-description ul li i {
+    color: var(--primary-red);
+    font-size: 0.9rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.service-note {
+    background: rgba(230, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-details-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .service-description.show {
+        padding: 15px;
+    }
+    
+    .service-description ul li {
+        font-size: 0.9rem;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section - Single Image Slider -->
+<section class="hero-slider-section" id="home">
+    <div class="hero-slider-wrapper">
+        <!-- Slide 1 -->
+        <div class="hero-slide-item active">
+            <img src="rigni-rubi.jpg" alt="RAGINI RUBI REAL ESTATE Property 1" loading="eager">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide-item">
+            <img src="rgni2.jpg" alt="RAGINI RUBI REAL ESTATE Property 2" loading="lazy">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide-item">
+            <img src="RGNI2.png" alt="RAGINI RUBI REAL ESTATE Property 3" loading="lazy">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="hero-slide-item">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1920&h=800&fit=crop&auto=format&q=80" alt="RAGINI RUBI REAL ESTATE Property 4" loading="lazy">
+        </div>
+    </div>
+    
+    <!-- Slider Controls -->
+    <button class="hero-slider-btn hero-prev-btn" id="prevSlide" aria-label="Previous slide">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hero-slider-btn hero-next-btn" id="nextSlide" aria-label="Next slide">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Slider Indicators -->
+    <div class="hero-slider-indicators">
+        <span class="hero-indicator active" data-slide="0"></span>
+        <span class="hero-indicator" data-slide="1"></span>
+        <span class="hero-indicator" data-slide="2"></span>
+        <span class="hero-indicator" data-slide="3"></span>
+    </div>
+</section>
+<!--PREVIOUS SERVICE SECTION-->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
+            </div>
+
+            <!-- Service Filter Buttons -->
+<div class="service-filter">
+    <!-- <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th"></i>
+        All Properties
+    </button> -->
+    <button class="filter-btn" data-filter="buy">
+        <i class="fas fa-home"></i>
+        Enquiry for Buy Property
+    </button>
+    <button class="filter-btn" data-filter="rent">
+        <i class="fas fa-key"></i>
+        Enquiry for Rent Property
+    </button>
+    <button class="filter-btn" data-filter="land">
+        <i class="fas fa-map"></i>
+        Enquiry for Buy Land
+    </button>
+    <button class="filter-btn" data-filter="sell">
+        <i class="fas fa-hand-holding-usd"></i>
+        Sell Property
+    </button>
+</div>
+
+
+            <!-- Services Grid (Original) -->
+            <div class="services-grid" id="servicesInfo">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Buying</h3>
+                    <p>Find your dream home from our extensive collection of residential and commercial properties across Assam.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Property Selling</h3>
+                    <p>Get the best value for your property with our expert marketing and negotiation services.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Rent Assistance</h3>
+                    <p>Whether you're a landlord or tenant, we help you find the perfect rental match quickly and efficiently.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real Estate Consultancy</h3>
+                    <p>Expert advice on property investment, market trends, and legal documentation to make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Services Grid (Original) -->
+<div class="services-grid" id="servicesInfo">
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <h3>Property Buying</h3>
+        <p>Find your dream home from our extensive collection of residential and commercial properties across Assam.</p>
+        
+        <!-- Expandable Description Box -->
+        <div class="service-details-box">
+            <button class="service-details-btn" onclick="toggleServiceDetails(this)">
+                <span>Learn More</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="service-description">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Wide selection of verified properties</li>
+                    <li><i class="fas fa-check-circle"></i> Expert guidance throughout the buying process</li>
+                    <li><i class="fas fa-check-circle"></i> Legal documentation assistance</li>
+                    <li><i class="fas fa-check-circle"></i> Home loan support and advice</li>
+                    <li><i class="fas fa-check-circle"></i> Property site visits and inspections</li>
+                    <li><i class="fas fa-check-circle"></i> Negotiation on your behalf</li>
+                </ul>
+                <p class="service-note">We help you find the perfect property that matches your budget and lifestyle needs across all of Assam.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>Property Selling</h3>
+        <p>Get the best value for your property with our expert marketing and negotiation services.</p>
+        
+        <!-- Expandable Description Box -->
+        <div class="service-details-box">
+            <button class="service-details-btn" onclick="toggleServiceDetails(this)">
+                <span>Learn More</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="service-description">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Free property valuation</li>
+                    <li><i class="fas fa-check-circle"></i> Professional photography and listing</li>
+                    <li><i class="fas fa-check-circle"></i> Marketing across multiple platforms</li>
+                    <li><i class="fas fa-check-circle"></i> Qualified buyer screening</li>
+                    <li><i class="fas fa-check-circle"></i> Price negotiation expertise</li>
+                    <li><i class="fas fa-check-circle"></i> Complete documentation support</li>
+                </ul>
+                <p class="service-note">Our proven marketing strategies ensure your property reaches the right buyers quickly and at the best price.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fas fa-key"></i>
+        </div>
+        <h3>Rent Assistance</h3>
+        <p>Whether you're a landlord or tenant, we help you find the perfect rental match quickly and efficiently.</p>
+        
+        <!-- Expandable Description Box -->
+        <div class="service-details-box">
+            <button class="service-details-btn" onclick="toggleServiceDetails(this)">
+                <span>Learn More</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="service-description">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Extensive database of rental properties</li>
+                    <li><i class="fas fa-check-circle"></i> Tenant verification and background checks</li>
+                    <li><i class="fas fa-check-circle"></i> Rental agreement preparation</li>
+                    <li><i class="fas fa-check-circle"></i> Property maintenance coordination</li>
+                    <li><i class="fas fa-check-circle"></i> Rent collection assistance for landlords</li>
+                    <li><i class="fas fa-check-circle"></i> Dispute resolution support</li>
+                </ul>
+                <p class="service-note">We streamline the rental process for both property owners and tenants, ensuring smooth and hassle-free transactions.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Real Estate Consultancy</h3>
+        <p>Expert advice on property investment, market trends, and legal documentation to make informed decisions.</p>
+        
+        <!-- Expandable Description Box -->
+        <div class="service-details-box">
+            <button class="service-details-btn" onclick="toggleServiceDetails(this)">
+                <span>Learn More</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="service-description">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Market analysis and trends</li>
+                    <li><i class="fas fa-check-circle"></i> Investment opportunity evaluation</li>
+                    <li><i class="fas fa-check-circle"></i> Property portfolio management</li>
+                    <li><i class="fas fa-check-circle"></i> Legal and regulatory guidance</li>
+                    <li><i class="fas fa-check-circle"></i> Financial planning for property investments</li>
+                    <li><i class="fas fa-check-circle"></i> Location-specific market insights</li>
+                </ul>
+                <p class="service-note">Our experienced consultants provide data-driven insights to help you make smart real estate investment decisions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script>
+    const slides = document.querySelectorAll(".hero-slide-item");
+    const indicators = document.querySelectorAll(".hero-indicator");
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+        indicators[i].classList.toggle("active", i === index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    // Auto slide every 5 seconds
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(slideInterval);
+    }
+
+    document.getElementById("nextSlide").addEventListener("click", () => {
+      nextSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+
+    document.getElementById("prevSlide").addEventListener("click", () => {
+      prevSlide();
+      stopAutoSlide();
+      startAutoSlide();
+    });
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        showSlide(index);
+        stopAutoSlide();
+        startAutoSlide();
+      });
+    });
+
+    // Start auto-slide on load
+    startAutoSlide();
+  </script>
+</body>
+</html>

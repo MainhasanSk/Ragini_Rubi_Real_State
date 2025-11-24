@@ -67,7 +67,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Hero Slider - Clean Image Slider
+// Hero Slider
+// Hero Slider - Updated for Clean Image Slider
 const slides = document.querySelectorAll('.hero-slide-item');
 const indicators = document.querySelectorAll('.hero-indicator');
 const prevBtn = document.getElementById('prevSlide');
@@ -85,16 +86,16 @@ function showSlide(n) {
     indicators[currentSlide].classList.add('active');
 }
 
-function nextSlideFunc() {
+function nextSlide() {
     showSlide(currentSlide + 1);
 }
 
-function prevSlideFunc() {
+function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
 function startSlideShow() {
-    slideInterval = setInterval(nextSlideFunc, 5000); // Change slide every 5 seconds
+    slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
 
 function stopSlideShow() {
@@ -103,13 +104,13 @@ function stopSlideShow() {
 
 if (prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
-        prevSlideFunc();
+        prevSlide();
         stopSlideShow();
         startSlideShow();
     });
 
     nextBtn.addEventListener('click', () => {
-        nextSlideFunc();
+        nextSlide();
         stopSlideShow();
         startSlideShow();
     });
@@ -168,200 +169,187 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Service Enquiry Modal Functions
-function openBuyModal() {
-    const buyModal = document.getElementById('buyEnquiryModal');
-    if (buyModal) {
-        buyModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function openRentModal() {
-    const rentModal = document.getElementById('rentEnquiryModal');
-    if (rentModal) {
-        rentModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function openSellModal() {
-    const sellModal = document.getElementById('sellPropertyModal');
-    if (sellModal) {
-        sellModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function openLandModal() {
-    const landModal = document.getElementById('landEnquiryModal');
-    if (landModal) {
-        landModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-// Buy Enquiry Modal Controls
-const closeBuyModal = document.getElementById('closeBuyModal');
-const cancelBuyForm = document.getElementById('cancelBuyForm');
-const buyEnquiryForm = document.getElementById('buyEnquiryForm');
-const buyFormSuccess = document.getElementById('buyFormSuccess');
-const closeBuySuccess = document.getElementById('closeBuySuccess');
+// Service Filter System
+// Service Filter System
+const filterBtns = document.querySelectorAll('.filter-btn');
+const propertiesGrid = document.getElementById('propertiesGrid');
+const propertyCards = document.querySelectorAll('.property-card');
+const noProperties = document.getElementById('noProperties');
 const buyEnquiryModal = document.getElementById('buyEnquiryModal');
-
-function closeBuyEnquiryModal() {
-    if (buyEnquiryModal) {
-        buyEnquiryModal.classList.remove('show');
-        document.body.style.overflow = 'auto';
-    }
-}
-
-if (closeBuyModal) {
-    closeBuyModal.addEventListener('click', closeBuyEnquiryModal);
-}
-
-if (cancelBuyForm) {
-    cancelBuyForm.addEventListener('click', closeBuyEnquiryModal);
-}
-
-if (buyEnquiryModal) {
-    buyEnquiryModal.addEventListener('click', (e) => {
-        if (e.target === buyEnquiryModal) {
-            closeBuyEnquiryModal();
-        }
-    });
-}
-
-if (buyEnquiryForm) {
-    buyEnquiryForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        buyEnquiryForm.style.display = 'none';
-        if (buyFormSuccess) {
-            buyFormSuccess.style.display = 'block';
-        }
-    });
-}
-
-if (closeBuySuccess) {
-    closeBuySuccess.addEventListener('click', () => {
-        closeBuyEnquiryModal();
-        if (buyEnquiryForm) {
-            buyEnquiryForm.reset();
-            buyEnquiryForm.style.display = 'block';
-        }
-        if (buyFormSuccess) {
-            buyFormSuccess.style.display = 'none';
-        }
-    });
-}
-
-// Rent Enquiry Modal Controls
-const closeRentModal = document.getElementById('closeRentModal');
-const cancelRentForm = document.getElementById('cancelRentForm');
-const rentEnquiryForm = document.getElementById('rentEnquiryForm');
-const rentFormSuccess = document.getElementById('rentFormSuccess');
-const closeRentSuccess = document.getElementById('closeRentSuccess');
 const rentEnquiryModal = document.getElementById('rentEnquiryModal');
-
-function closeRentEnquiryModal() {
-    if (rentEnquiryModal) {
-        rentEnquiryModal.classList.remove('show');
-        document.body.style.overflow = 'auto';
-    }
-}
-
-if (closeRentModal) {
-    closeRentModal.addEventListener('click', closeRentEnquiryModal);
-}
-
-if (cancelRentForm) {
-    cancelRentForm.addEventListener('click', closeRentEnquiryModal);
-}
-
-if (rentEnquiryModal) {
-    rentEnquiryModal.addEventListener('click', (e) => {
-        if (e.target === rentEnquiryModal) {
-            closeRentEnquiryModal();
-        }
-    });
-}
-
-if (rentEnquiryForm) {
-    rentEnquiryForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        rentEnquiryForm.style.display = 'none';
-        if (rentFormSuccess) {
-            rentFormSuccess.style.display = 'block';
-        }
-    });
-}
-
-if (closeRentSuccess) {
-    closeRentSuccess.addEventListener('click', () => {
-        closeRentEnquiryModal();
-        if (rentEnquiryForm) {
-            rentEnquiryForm.reset();
-            rentEnquiryForm.style.display = 'block';
-        }
-        if (rentFormSuccess) {
-            rentFormSuccess.style.display = 'none';
-        }
-    });
-}
-
-// Sell Property Modal Controls
-const closeSellModal = document.getElementById('closeSellModal');
-const cancelSellForm = document.getElementById('cancelSellForm');
-const sellPropertyForm = document.getElementById('sellPropertyForm');
-const sellFormSuccess = document.getElementById('sellFormSuccess');
-const closeSellSuccess = document.getElementById('closeSellSuccess');
+const landEnquiryModal = document.getElementById('landEnquiryModal');
 const sellPropertyModal = document.getElementById('sellPropertyModal');
+const filterMessage = document.getElementById('filterMessage');
+const servicesInfo = document.getElementById('servicesInfo');
 
-function closeSellPropertyModal() {
-    if (sellPropertyModal) {
-        sellPropertyModal.classList.remove('show');
-        document.body.style.overflow = 'auto';
+let currentFilter = 'all'; // Default filter changed to 'all'
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        currentFilter = filter;
+        
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        if (filter === 'all') {
+            // Show all properties
+            filterProperties('all');
+            
+            if (propertiesGrid) {
+                propertiesGrid.style.display = 'grid';
+            }
+            if (servicesInfo) {
+                servicesInfo.style.display = 'none';
+            }
+            if (filterMessage) {
+                filterMessage.classList.remove('show');
+            }
+            
+        } else if (filter === 'buy') {
+            // Show buy enquiry modal
+            if (buyEnquiryModal) {
+                buyEnquiryModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Show properties for sale
+            filterProperties('sale');
+            
+            if (propertiesGrid) {
+                propertiesGrid.style.display = 'grid';
+            }
+            if (servicesInfo) {
+                servicesInfo.style.display = 'none';
+            }
+            
+        } else if (filter === 'rent') {
+            // Show rent enquiry modal
+            if (rentEnquiryModal) {
+                rentEnquiryModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Show properties for rent
+            filterProperties('rent');
+            
+            if (propertiesGrid) {
+                propertiesGrid.style.display = 'grid';
+            }
+            if (servicesInfo) {
+                servicesInfo.style.display = 'none';
+            }
+            
+        } else if (filter === 'land') {
+            // Show land enquiry modal
+            if (landEnquiryModal) {
+                landEnquiryModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Show all properties
+            filterProperties('all');
+            
+            if (propertiesGrid) {
+                propertiesGrid.style.display = 'grid';
+            }
+            if (servicesInfo) {
+                servicesInfo.style.display = 'none';
+            }
+            
+        } else if (filter === 'sell') {
+            // Show sell property form modal
+            if (sellPropertyModal) {
+                sellPropertyModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Hide properties grid and show services info
+            if (propertiesGrid) {
+                propertiesGrid.style.display = 'none';
+            }
+            if (noProperties) {
+                noProperties.style.display = 'none';
+            }
+            if (filterMessage) {
+                filterMessage.classList.remove('show');
+            }
+            if (servicesInfo) {
+                servicesInfo.style.display = 'grid';
+            }
+        }
+    });
+});
+
+function filterProperties(filter) {
+    let visibleCount = 0;
+    
+    if (filter === 'all') {
+        // Show all properties
+        propertyCards.forEach(card => {
+            card.classList.remove('hidden');
+            visibleCount++;
+        });
+        
+        // Hide filter message and no properties message
+        if (filterMessage) {
+            filterMessage.classList.remove('show');
+        }
+        if (noProperties) {
+            noProperties.style.display = 'none';
+        }
+    } else {
+        // Filter by type
+        propertyCards.forEach(card => {
+            const propertyType = card.getAttribute('data-type');
+            
+            if (filter === 'sale' && propertyType === 'sale') {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else if (filter === 'rent' && propertyType === 'rent') {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        // Show/hide no properties message
+        if (visibleCount === 0) {
+            if (noProperties) {
+                noProperties.style.display = 'block';
+            }
+            if (filterMessage) {
+                filterMessage.classList.remove('show');
+            }
+        } else {
+            if (noProperties) {
+                noProperties.style.display = 'none';
+            }
+            
+            // Update filter message
+            if (filterMessage) {
+                if (filter === 'sale') {
+                    filterMessage.textContent = `Showing ${visibleCount} Properties Available for Purchase`;
+                } else if (filter === 'rent') {
+                    filterMessage.textContent = `Showing ${visibleCount} Properties Available for Rent`;
+                }
+                filterMessage.classList.add('show');
+            }
+        }
     }
 }
 
-if (closeSellModal) {
-    closeSellModal.addEventListener('click', closeSellPropertyModal);
-}
-
-if (cancelSellForm) {
-    cancelSellForm.addEventListener('click', closeSellPropertyModal);
-}
-
-if (sellPropertyModal) {
-    sellPropertyModal.addEventListener('click', (e) => {
-        if (e.target === sellPropertyModal) {
-            closeSellPropertyModal();
+// Initialize with all properties visible on page load
+window.addEventListener('load', () => {
+    if (propertyCards.length > 0) {
+        filterProperties('all');
+        if (servicesInfo) {
+            servicesInfo.style.display = 'none';
         }
-    });
-}
-
-if (sellPropertyForm) {
-    sellPropertyForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        sellPropertyForm.style.display = 'none';
-        if (sellFormSuccess) {
-            sellFormSuccess.style.display = 'block';
-        }
-    });
-}
-
-if (closeSellSuccess) {
-    closeSellSuccess.addEventListener('click', () => {
-        closeSellPropertyModal();
-        if (sellPropertyForm) {
-            sellPropertyForm.reset();
-            sellPropertyForm.style.display = 'block';
-        }
-        if (sellFormSuccess) {
-            sellFormSuccess.style.display = 'none';
-        }
-    });
-}
+    }
+});
 
 // Land Enquiry Modal Controls
 const closeLandModal = document.getElementById('closeLandModal');
@@ -369,7 +357,6 @@ const cancelLandForm = document.getElementById('cancelLandForm');
 const landEnquiryForm = document.getElementById('landEnquiryForm');
 const landFormSuccess = document.getElementById('landFormSuccess');
 const closeLandSuccess = document.getElementById('closeLandSuccess');
-const landEnquiryModal = document.getElementById('landEnquiryModal');
 
 function closeLandEnquiryModal() {
     if (landEnquiryModal) {
@@ -397,6 +384,8 @@ if (landEnquiryModal) {
 if (landEnquiryForm) {
     landEnquiryForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        // Hide form and show success message
         landEnquiryForm.style.display = 'none';
         if (landFormSuccess) {
             landFormSuccess.style.display = 'block';
@@ -413,6 +402,189 @@ if (closeLandSuccess) {
         }
         if (landFormSuccess) {
             landFormSuccess.style.display = 'none';
+        }
+    });
+}
+
+
+// Buy Enquiry Modal Controls
+const closeBuyModal = document.getElementById('closeBuyModal');
+const cancelBuyForm = document.getElementById('cancelBuyForm');
+const buyEnquiryForm = document.getElementById('buyEnquiryForm');
+const buyFormSuccess = document.getElementById('buyFormSuccess');
+const closeBuySuccess = document.getElementById('closeBuySuccess');
+
+function closeBuyEnquiryModal() {
+    if (buyEnquiryModal) {
+        buyEnquiryModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+if (closeBuyModal) {
+    closeBuyModal.addEventListener('click', closeBuyEnquiryModal);
+}
+
+if (cancelBuyForm) {
+    cancelBuyForm.addEventListener('click', closeBuyEnquiryModal);
+}
+
+if (buyEnquiryModal) {
+    buyEnquiryModal.addEventListener('click', (e) => {
+        if (e.target === buyEnquiryModal) {
+            closeBuyEnquiryModal();
+        }
+    });
+}
+
+if (buyEnquiryForm) {
+    buyEnquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Hide form and show success message
+        buyEnquiryForm.style.display = 'none';
+        if (buyFormSuccess) {
+            buyFormSuccess.style.display = 'block';
+        }
+    });
+}
+
+if (closeBuySuccess) {
+    closeBuySuccess.addEventListener('click', () => {
+        closeBuyEnquiryModal();
+        if (buyEnquiryForm) {
+            buyEnquiryForm.reset();
+            buyEnquiryForm.style.display = 'block';
+        }
+        if (buyFormSuccess) {
+            buyFormSuccess.style.display = 'none';
+        }
+    });
+}
+
+// Rent Enquiry Modal Controls
+const closeRentModal = document.getElementById('closeRentModal');
+const cancelRentForm = document.getElementById('cancelRentForm');
+const rentEnquiryForm = document.getElementById('rentEnquiryForm');
+const rentFormSuccess = document.getElementById('rentFormSuccess');
+const closeRentSuccess = document.getElementById('closeRentSuccess');
+
+function closeRentEnquiryModal() {
+    if (rentEnquiryModal) {
+        rentEnquiryModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+if (closeRentModal) {
+    closeRentModal.addEventListener('click', closeRentEnquiryModal);
+}
+
+if (cancelRentForm) {
+    cancelRentForm.addEventListener('click', closeRentEnquiryModal);
+}
+
+if (rentEnquiryModal) {
+    rentEnquiryModal.addEventListener('click', (e) => {
+        if (e.target === rentEnquiryModal) {
+            closeRentEnquiryModal();
+        }
+    });
+}
+
+if (rentEnquiryForm) {
+    rentEnquiryForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Hide form and show success message
+        rentEnquiryForm.style.display = 'none';
+        if (rentFormSuccess) {
+            rentFormSuccess.style.display = 'block';
+        }
+    });
+}
+
+if (closeRentSuccess) {
+    closeRentSuccess.addEventListener('click', () => {
+        closeRentEnquiryModal();
+        if (rentEnquiryForm) {
+            rentEnquiryForm.reset();
+            rentEnquiryForm.style.display = 'block';
+        }
+        if (rentFormSuccess) {
+            rentFormSuccess.style.display = 'none';
+        }
+    });
+}
+
+// Sell Property Modal Controls
+const closeSellModal = document.getElementById('closeSellModal');
+const cancelSellForm = document.getElementById('cancelSellForm');
+const sellPropertyForm = document.getElementById('sellPropertyForm');
+const sellFormSuccess = document.getElementById('sellFormSuccess');
+const closeSellSuccess = document.getElementById('closeSellSuccess');
+
+function closeSellPropertyModal() {
+    if (sellPropertyModal) {
+        sellPropertyModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Reset to buy filter
+    filterBtns.forEach(btn => {
+        if (btn.getAttribute('data-filter') === 'buy') {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    filterProperties('sale');
+    
+    if (propertiesGrid) {
+        propertiesGrid.style.display = 'grid';
+    }
+    if (servicesInfo) {
+        servicesInfo.style.display = 'none';
+    }
+}
+
+if (closeSellModal) {
+    closeSellModal.addEventListener('click', closeSellPropertyModal);
+}
+
+if (cancelSellForm) {
+    cancelSellForm.addEventListener('click', closeSellPropertyModal);
+}
+
+if (sellPropertyModal) {
+    sellPropertyModal.addEventListener('click', (e) => {
+        if (e.target === sellPropertyModal) {
+            closeSellPropertyModal();
+        }
+    });
+}
+
+if (sellPropertyForm) {
+    sellPropertyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Hide form and show success message
+        sellPropertyForm.style.display = 'none';
+        if (sellFormSuccess) {
+            sellFormSuccess.style.display = 'block';
+        }
+    });
+}
+
+if (closeSellSuccess) {
+    closeSellSuccess.addEventListener('click', () => {
+        closeSellPropertyModal();
+        if (sellPropertyForm) {
+            sellPropertyForm.reset();
+            sellPropertyForm.style.display = 'block';
+        }
+        if (sellFormSuccess) {
+            sellFormSuccess.style.display = 'none';
         }
     });
 }
@@ -450,7 +622,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all cards and sections
-const animateElements = document.querySelectorAll('.service-box, .property-card, .testimonial-card, .stat-card, .founder-card, .why-card, .achievement-card, .contact-info, .contact-form-wrapper, .gallery-item');
+const animateElements = document.querySelectorAll('.service-card, .property-card, .testimonial-card, .stat-card, .founder-card, .why-card, .achievement-card, .contact-info, .contact-form-wrapper');
 
 animateElements.forEach(element => {
     element.style.opacity = '0';
@@ -493,6 +665,3 @@ document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
 });
 
 console.log('RAGINI RUBI REAL ESTATE - Website Loaded Successfully!');
-//video
-// Gallery Page - Simple Animations and Smooth Scrolling
-
