@@ -2370,3 +2370,344 @@ section {
     }
 }
 
+/* Agent Realstate */
+/* RERA Certification Badge */
+.rera-badge {
+    background: linear-gradient(135deg, rgba(230, 0, 0, 0.05), rgba(230, 0, 0, 0.02));
+    border: 2px solid var(--primary-red);
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(230, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.rera-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(230, 0, 0, 0.05), transparent);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.rera-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(230, 0, 0, 0.2);
+    border-color: var(--black);
+}
+
+.rera-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-red), #ff3333);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(230, 0, 0, 0.3);
+    animation: rotate 10s linear infinite;
+}
+
+.rera-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.rera-info {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.rera-info h4 {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.rera-info p {
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.rera-info strong {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.rera-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.rera-location i {
+    color: var(--primary-red);
+}
+
+.rera-verified {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    background: var(--primary-red);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.rera-verified i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.rera-verified span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Animations */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rera-badge {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .rera-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .rera-icon i {
+        font-size: 1.6rem;
+    }
+    
+    .rera-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .rera-info p {
+        font-size: 0.9rem;
+    }
+    
+    .rera-location {
+        justify-content: center;
+    }
+    
+    .rera-verified {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .rera-verified i {
+        font-size: 1.5rem;
+    }
+}
+/* New Booking */
+/* Booking Modal Styles */
+.booking-modal-content {
+    max-width: 600px;
+}
+
+.booking-property-info {
+    background: linear-gradient(135deg, rgba(230, 0, 0, 0.05), rgba(230, 0, 0, 0.02));
+    border: 2px solid var(--primary-red);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.booking-property-info h4 {
+    color: var(--black);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-property-info h4 i {
+    color: var(--primary-red);
+}
+
+.booking-property-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.booking-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.booking-detail-item i {
+    color: var(--primary-red);
+    width: 20px;
+}
+
+.booking-detail-item strong {
+    color: var(--black);
+}
+
+.booking-form .form-section h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.booking-form .form-section h3 i {
+    color: var(--primary-red);
+}
+
+.required {
+    color: var(--primary-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-modal-content {
+        margin: 20px;
+    }
+    
+    .booking-property-info {
+        padding: 15px;
+    }
+    
+    .booking-property-info h4 {
+        font-size: 1.2rem;
+    }
+}
+/* New Booking model */
+/* Booking Modal Styles */
+.booking-modal-content {
+    max-width: 600px;
+}
+
+.booking-property-info {
+    background: linear-gradient(135deg, rgba(230, 0, 0, 0.05), rgba(230, 0, 0, 0.02));
+    border: 2px solid var(--primary-red);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.booking-property-info h4 {
+    color: var(--black);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.booking-property-info h4 i {
+    color: var(--primary-red);
+}
+
+.booking-property-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.booking-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.booking-detail-item i {
+    color: var(--primary-red);
+    width: 20px;
+}
+
+.booking-detail-item strong {
+    color: var(--black);
+}
+
+.booking-form .form-section h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.booking-form .form-section h3 i {
+    color: var(--primary-red);
+}
+
+.required {
+    color: var(--primary-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-modal-content {
+        margin: 20px;
+    }
+    
+    .booking-property-info {
+        padding: 15px;
+    }
+    
+    .booking-property-info h4 {
+        font-size: 1.2rem;
+    }
+}

@@ -496,3 +496,139 @@ console.log('RAGINI RUBI REAL ESTATE - Website Loaded Successfully!');
 //video
 // Gallery Page - Simple Animations and Smooth Scrolling
 
+// new booking model
+// Booking Modal Functionality
+const bookingModal = document.getElementById('bookingModal');
+const closeBookingModal = document.getElementById('closeBookingModal');
+const cancelBooking = document.getElementById('cancelBooking');
+const bookingForm = document.getElementById('bookingForm');
+const bookingVisitDate = document.getElementById('bookingVisitDate');
+
+// Set minimum date to today
+if (bookingVisitDate) {
+    const today = new Date().toISOString().split('T')[0];
+    bookingVisitDate.setAttribute('min', today);
+}
+
+// Store current property details
+let currentPropertyDetails = {
+    name: '',
+    location: '',
+    type: ''
+};
+
+// Open Booking Modal
+function openBookingModal(propertyName, location, type) {
+    currentPropertyDetails = { propertyName, location, type };
+    
+    // Update property info in modal
+    const propertyInfo = document.getElementById('bookingPropertyInfo');
+    propertyInfo.innerHTML = `
+        <h4><i class="fas fa-building"></i> ${propertyName}</h4>
+        <div class="booking-property-details">
+            <div class="booking-detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>Location:</strong> ${location}</span>
+            </div>
+            <div class="booking-detail-item">
+                <i class="fas fa-tag"></i>
+                <span><strong>Type:</strong> ${type}</span>
+            </div>
+        </div>
+    `;
+    
+    // Show modal
+    bookingModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close Booking Modal
+function closeBookingModalFunc() {
+    bookingModal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+    bookingForm.reset();
+}
+
+if (closeBookingModal) {
+    closeBookingModal.addEventListener('click', closeBookingModalFunc);
+}
+
+if (cancelBooking) {
+    cancelBooking.addEventListener('click', closeBookingModalFunc);
+}
+
+// Close on outside click
+if (bookingModal) {
+    bookingModal.addEventListener('click', (e) => {
+        if (e.target === bookingModal) {
+            closeBookingModalFunc();
+        }
+    });
+}
+
+// Handle Form Submission
+if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('bookingName').value.trim();
+        const phone = document.getElementById('bookingPhone').value.trim();
+        const email = document.getElementById('bookingEmail').value.trim();
+        const message = document.getElementById('bookingMessage').value.trim();
+        const visitDate = document.getElementById('bookingVisitDate').value;
+        
+        // Validate phone number
+        if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+            alert('Please enter a valid 10-digit phone number');
+            return;
+        }
+        
+        // Create WhatsApp message
+        let whatsappMessage = `*New Property Booking Enquiry*\n\n`;
+        whatsappMessage += `*Property Details:*\n`;
+        whatsappMessage += `• Name: ${currentPropertyDetails.propertyName}\n`;
+        whatsappMessage += `• Location: ${currentPropertyDetails.location}\n`;
+        whatsappMessage += `• Type: ${currentPropertyDetails.type}\n\n`;
+        whatsappMessage += `*Customer Details:*\n`;
+        whatsappMessage += `• Name: ${name}\n`;
+        whatsappMessage += `• Phone: ${phone}\n`;
+        
+        if (email) {
+            whatsappMessage += `• Email: ${email}\n`;
+        }
+        
+        if (visitDate) {
+            const formattedDate = new Date(visitDate).toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            whatsappMessage += `• Preferred Visit Date: ${formattedDate}\n`;
+        }
+        
+        if (message) {
+            whatsappMessage += `\n*Message:*\n${message}`;
+        }
+        
+        whatsappMessage += `\n\n_Sent from RAGINI RUBI REAL ESTATE Website_`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // Your WhatsApp number (replace with actual number)
+        const whatsappNumber = '919876543210';
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+        
+        // Close modal and reset form
+        setTimeout(() => {
+            closeBookingModalFunc();
+        }, 500);
+    });
+}
